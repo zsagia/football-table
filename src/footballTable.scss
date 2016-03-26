@@ -1,0 +1,59 @@
+.football-table {
+	table {
+		width: 100%;
+
+		> thead,
+		> tbody,
+		> tfoot {
+			> tr {
+				> th,
+				> td {
+					border: 1px solid #ddd;
+					color: #333;
+					font-family: Arial,Helvetica,sans-serif;
+					font-size: 11px;
+					padding: 1px;
+					text-align: center;
+
+				}
+
+				td.club {
+					text-align: left;
+				}
+
+				th {
+					background-color: #8b95a4;
+				}
+			}
+
+			> tr.row-1 {
+				background-color: #8cbde0;
+			}
+
+			> tr.row-2,
+			> tr.row-3,
+			> tr.row-4 {
+				background-color: #c8dceb;
+			}
+
+			> tr.row-5 {
+				background-color: #edf5fa;
+			}
+
+			> tr.row-18,
+			> tr.row-19,
+			> tr.row-20 {
+				background-color: #e0e6e9;
+			}
+		}
+	}
+
+	header {
+		padding: 15px;
+	}
+
+	input[type=range] {
+		margin: 10px auto;
+		width: 94%;
+	}
+}

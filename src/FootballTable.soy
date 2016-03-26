@@ -1,0 +1,81 @@
+{namespace Templates.FootballTable}
+
+/**
+ * This renders the main element.
+ * @param? elementClasses
+ * @param? tableClasses
+ * @param id
+ * @param rounds
+ * @param selectedRound
+ * @param tableColumnNames
+ * @param tableColumnClassNames
+ * @skipUpdates elementClasses
+ */
+{template .render}
+	<div id="{$id}" class="football-table component{$elementClasses ? ' ' + $elementClasses : ''}">
+	{call .renderRange_}
+		{param maxValue: $rounds.length /}
+		{param value: $selectedRound /}
+	{/call}
+	{call .renderTable_ data="$rounds"}
+		{param columns: $tableColumnNames /}
+		{param columnClasses: $tableColumnClassNames /}
+		{param value: $rounds[$selectedRound - 1] /}
+		{param tableClasses: $tableClasses /}
+	{/call}
+	</div>
+{/template}
+
+/**
+ * @param columns
+ * @param columnClasses
+ * @param value
+ * @param? tableClasses
+ */
+{template .renderTable_ private="true"}
+	<table class="{$tableClasses ? $tableClasses : ''}">
+		<thead>
+			<tr>
+				{foreach $column in $columns}
+					<th class="col-{$columnClasses[index($column)]}">
+						<span class="table-column">{$column}</span>
+					</th>
+				{/foreach}
+			</tr>
+		</thead>
+		<tbody>
+			{foreach $arrayRowValue in $value}
+				{let $rowIndex: index($arrayRowValue) + 1 /}
+
+				{call .renderRow_}
+					{param arrayRowValue: $arrayRowValue /}
+					{param columnClasses: $columnClasses /}
+					{param rowIndex: $rowIndex /}
+				{/call}
+			{/foreach}
+		</tbody>
+	</table>
+{/template}
+
+/**
+ * @param arrayRowValue
+ * @param columnClasses
+ * @param rowIndex
+ */
+{template .renderRow_ private="true"}
+	<tr class="row-{$rowIndex}">
+		{foreach $key in keys($arrayRowValue)}
+			<td class="{$columnClasses[index($key)]}">
+				{$arrayRowValue[$key]}
+			</td>
+		{/foreach}
+	</tr>
+{/template}
+
+/**
+ * @param maxValue
+ * @param value
+ */
+{template .renderRange_ private="true"}
+	<input data-onchange="changeTableContents" id="round" min="1" max="{$maxValue}" type="range" value="{$value}" />
+{/template}

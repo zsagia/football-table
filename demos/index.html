@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: FootballTable</title>
+
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="../build/footballTable.css">
+
+	<script src="data.js"></script>
+	<script src="../node_modules/closure-templates/soyutils.js"></script>
+	<script src="../build/globals/footballTable.js"></script>
+</head>
+<body>
+	<h1>FootballTable</h1>
+	<script type="text/javascript">
+		new metal.FootballTable({
+			matches: matches
+		}).render();
+	</script>
+</body>
+</html>

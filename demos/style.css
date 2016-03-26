@@ -1,0 +1,142 @@
+.football-table table{
+	width: 100%;
+}
+.football-table td, .football-table th {
+	border: 1px solid #ddd;
+	color: #333;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px;
+	text-align: center;
+}
+.football-table td.club {
+	text-align: left;
+}
+.football-table tr.row-1 {
+	background-color: #8cbde0;
+}
+.football-table tr.row-2, .football-table tr.row-3, .football-table tr.row-4 {
+	background-color: #c8dceb;
+}
+.football-table tr.row-5 {
+	background-color: #edf5fa;
+}
+.football-table tr.row-18, .football-table tr.row-19, .football-table tr.row-20 {
+	background-color: #e0e6e9;
+}
+.football-table td.movement span {
+	background-image: url('http://www.premierleague.com/etc/designs/premierleague/images/iconsprite.png');
+	display: inline-block;
+	height: 22px;
+	width: 20px;
+}
+.football-table td.movement span.down {
+	background-position: -619px -155px;
+}
+.football-table td.movement span.stayed {
+	background-position: -619px -243px;
+}
+.football-table td.movement span.up {
+	background-position: -619px -184px;
+}
+.football-table th.col-movement span.head {
+	background: url('http://www.premierleague.com/etc/designs/premierleague/images/iconsprite.png') -613px -58px no-repeat;
+	display: inline-block;
+	height: 22px;
+	width: 25px;
+}
+.football-table thead tr, .football-table tfoot th {
+	background-color: #8b95a4
+}
+.football-table input[type=range] {
+	width: 100%;
+}
+.football-table header {
+	padding: 15px;
+}
+input[type=range] {
+	-webkit-appearance: none;
+	width: 100%;
+	margin: 13.8px 0;
+}
+input[type=range]:focus {
+	outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	background: #0971a9;
+	border-radius: 1.3px;
+	border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #0a81c1;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #0971a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #086191;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #0971a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 8.4px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #0971a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #0a81c1;
+}
